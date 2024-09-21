@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head> <!-- o topo do site. entra o favicon e o titulo na aba-->
+        <meta charset="utf-8"> <!-- define o unicode para ptbr-->
+        <title> :D </title>
+    </head>
+    <body> <!-- o corpo do site. tudo vai aqui dentro -->
+        
+        <h1> <!-- texto com valor 1 (alto) -->
+            Tarefa do prof
+        </h1>
+
+        <label for="val"> Digite aqui o valor: </label>
+        <input type="text" id="val" size="2" maxlength="2"> <!-- tag de entrada para o usuario inserir uma entrada -->
+
+        <button type="button" id="calcPot" onclick="aoClicar()"> Calcular potencia de 2 </button> <!-- tag para botão. 
+        o type define que a tag é do tipo botão. a id é referente ao nome -->
+
+        <div id="showResult"></div> <!-- tag que gera um bloco no html. divide em blocos. -->
+
+    </body>
+</html>
+
+<script> // começo do javascript
+
+
+function aoClicar(){
+    var teste = document.getElementById('val').value;
+    calculadora(teste);
+}
+
+
+function calculadora(pot){ // função para calcular a potencia do valor que o usuario inserir
+    res = pot ** 2; // calcula a exponenciação sobre 2
+    return res; // retorna o resultado da exponenciação
+}
+
+</script>
