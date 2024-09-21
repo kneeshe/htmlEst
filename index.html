@@ -3,6 +3,8 @@
 <html>
     <head> <!-- o topo do site. entra o favicon e o titulo na aba-->
         <meta charset="utf-8"> <!-- define o unicode para ptbr-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
         <title> :D </title>
     </head>
     <body> <!-- o corpo do site. tudo vai aqui dentro -->
@@ -11,29 +13,59 @@
             Tarefa do prof
         </h1>
 
-        <label for="val"> Digite aqui o valor: </label>
+        <p> Tag p é a tag de paragrafo </p> <!-- tag para colocar um paragrafo -->
+
+        <div class="menu">
+            <a href="#"> Opção 1</a> <!-- cria links de redirecionamento. tag a é link. href é o link a ser redirecionado -->
+            <a href="#"> Opção 2</a>
+            <a href="#"> Opção 3</a> 
+            <a href="#"> Opção 4</a> 
+        </div>
+        <br>
+
+        <label for="val"> Digite aqui o valor: </label> <!-- cria uma tag de rotulo, onde aparece o texto para o nome. o for indica que a tag 
+        é referente ao input abaixo -->
         <input type="text" id="val" size="2" maxlength="2"> <!-- tag de entrada para o usuario inserir uma entrada -->
 
-        <button type="button" id="calcPot" onclick="aoClicar()"> Calcular potencia de 2 </button> <!-- tag para botão. 
+        <button type="button" id="calcPot" onclick="calculadora()"> Calcular potencia de 2 </button> <!-- tag para botão. 
         o type define que a tag é do tipo botão. a id é referente ao nome -->
 
-        <div id="showResult"></div> <!-- tag que gera um bloco no html. divide em blocos. -->
+        <div id="showResult"></div> <!-- tag que gera um bloco no html. divide em blocos. --> 
+
+    <table> <!-- tag de tabela. serve para formatar em forma de tabela -->
+    <form> <!-- tag de formulario. tudo do formulario vai dentro dela -->
+        <tr> <!-- table row. é a tag que define a linha da tabela -->
+            <th> Categoria </th> <!-- table head. define a celula cabeçalho na tabela -->
+            <th> Entrada de dados </th> 
+        </tr> 
+
+        <tr> 
+        <td><label for="rotulo"> Rotulo: </label></td> <!-- rotulo na primeira linha da tabela -->
+        <td><input type="text" id="rotulo" name="rotulo"></td> <!-- caixa de entrada com referencia ao rotulo -->
+        </tr> 
+
+        <tr> 
+        <td><label for="rotuloComData"> Rotulo com data: </label></td> 
+        <td><input type="date" id="rotuloComData" name="rotuloComData"></td> <!-- input com o tipo data -->
+        </tr> 
+
+        <p> Aqui vamos selecionar as opções: </p> 
+        <input type="radio" id="selecao1" name="selecao" value="selecao1"> <!-- input com o tipo radio, que é o circulo de seleção -->
+        <label for="selecao1"> Seleção 1 </label> 
+        <br>  
+
+        <input type="radio" id="selecao2" name="selecao" value="selecao2"> <!-- o name precisa ser igual nas duas tags, para que as duas não 
+        sejam selecionadas ao mesmo tempo -->
+        <label for="selecao2"> Seleção 2 </label> 
+        <br> 
+        <br> 
+
+        <input type="submit" value="Enviar"> <!-- input do tipo 'botão' -->
+        <br> 
+        <br> 
+
+    </form> <!-- fim da tag de formulario -->
+    </table> <!-- fim da tag de tabela -->
 
     </body>
 </html>
-
-<script> // começo do javascript
-
-
-function aoClicar(){
-    var teste = document.getElementById('val').value;
-    calculadora(teste);
-}
-
-
-function calculadora(pot){ // função para calcular a potencia do valor que o usuario inserir
-    res = pot ** 2; // calcula a exponenciação sobre 2
-    return res; // retorna o resultado da exponenciação
-}
-
-</script>
