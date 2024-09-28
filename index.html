@@ -3,8 +3,8 @@
 <html>
     <head> <!-- o topo do site. entra o favicon e o titulo na aba-->
         <meta charset="utf-8"> <!-- define o unicode para ptbr-->
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css"> <!-- estancia o arquivo do css  -->
+        <script type="text/javascript" src="script.js"></script> <!-- estancia o arquivo do css  -->
         <title> :D </title>
     </head>
     <body> <!-- o corpo do site. tudo vai aqui dentro -->
@@ -66,6 +66,31 @@
 
     </form> <!-- fim da tag de formulario -->
     </table> <!-- fim da tag de tabela -->
+
+    <h1> Formulario de Registro </h1> <!-- formulario para testar a função de validação de input do usuario -->
+        <form name="formReg" onsubmit="return validaForm()"> <!--formulario. onsubmit ativa a função "validaForm" no js-->
+        <p>
+            <label for="nome"> Nome: </label> <!-- label padrão. "for" associa ela ao input abaixo de mesmo nome -->
+            <input type="text" id="nome" name="nome" placeholder="Seu nome aqui"> <!-- type define o tipo de input - text é para texto. id e name são identificadores da tag para outras funções -->
+            <span id="erro-nome" class="mensagem-erro"></span> <!--span é, mas não é, como uma div kkkk -->
+        </p>
+
+        <p>
+            <label for="endereco"> Endereço: </label>
+            <input type="text" id="endereco" name="endereco" placeholder="Entre o endereço"> <!-- placeholder adiciona um texto não interativo dentro da caixa de input -->
+            <span id="erro-endereco" class="mensagem-erro"></span> <!-- "O atributo global class é uma lista das classes de um elemento, separada por espaços. Classes permitem a CSS e Javascript selecionar e acessar elementos específicos através dos seletores de classe ou funções como o método DOM document.getElementsByClassName." -->
+        </p>
+
+        <p>
+            <label for="email"> Email: </label>
+            <input type="text" id="email" name="email" placeholder="Entre com seu email">
+            <span id="erro-email" class="mensagem-erro"></span>
+        </p> 
+
+        <p>
+            <input type="submit" value="Enviar"> <!--botão simples -->
+        </p>
+    </form> 
 
     </body>
 </html>
